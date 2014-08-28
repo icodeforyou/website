@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'icodeforu',
 			'username'  => 'forge',
-			'password'  => $_ENV["db-pass"],
+			'password'  => (isset($_ENV["db-pass"])?:""),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

@@ -126,6 +126,8 @@ return array(
 
 		"Indatus\Dispatcher\ServiceProvider",
 
+		"GrahamCampbell\DigitalOcean\DigitalOceanServiceProvider",
+
 	),
 
 	/*
