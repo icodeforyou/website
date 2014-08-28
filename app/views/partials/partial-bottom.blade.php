@@ -10,4 +10,3 @@
   ga('send', 'pageview');
 
 </script>
-<em><small>Hosted @ <a href="https://www.digitalocean.com/?refcode=de6f50cc615f">DigitalOcean</a></small></em>

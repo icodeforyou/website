@@ -15,7 +15,7 @@
               
                 @include("partials.partial-navigation")
                 
-                <p>&copy; {{ date("Y",time()) }}. All rights reserved. <small>{{ $_SERVER['SERVER_ADDR'] }}</small></p>
+                <p>&copy; {{ date("Y",time()) }}. All rights reserved. <em><small>Hosted @ <a href="https://www.digitalocean.com/?refcode=de6f50cc615f">DigitalOcean</a></small></em></p>
 
             </div>
         </div>
