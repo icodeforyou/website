@@ -14,3 +14,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="jULFucDGwUhDEPfXY94cNef5hHSb4Xr-cf8x5fMA1Ao" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
+<script src="/js/angular-ui-router.min.js"></script>
+<script src="/js/app.js"></script>

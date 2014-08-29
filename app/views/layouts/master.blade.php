@@ -1,4 +1,4 @@
-<html>
+<html ng-app="SpaApp">
     <head>
         @include("partials.partial-header")
     </head>
@@ -19,7 +19,7 @@
 
             </div>
         </div>
-        <div class="content container">
+        <div class="content container" ui-view>
             @yield("content")
         </div>
 

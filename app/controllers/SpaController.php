@@ -4,18 +4,17 @@ class SpaController extends \BaseController {
 
     public function RenderPage($page)
     {
-        try {
+        
+        if(View::exists($page)) {
 
             $view = View::make($page);
 
-            return Response::json([
-                "markup" => $view->render()
-            ]);
+            $content = $view->renderSections();
 
-        } catch (Exception $e) {
-            Response::json(["error" => $e->getMessage()], 404);
+            return Response::make($content["content"]);
+        } else {
+            return Response::json("View not found", 404);
         }
-        
         
     }
 
