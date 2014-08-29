@@ -11,9 +11,9 @@ class SpaController extends \BaseController {
             return Response::json([
                 "markup" => $view->render()
             ]);
-            
+
         } catch (Exception $e) {
-            Response::json($e->getMessage(), 404);
+            Response::json(["error" => $e->getMessage()], 404);
         }
         
         
