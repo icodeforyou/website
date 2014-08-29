@@ -26,4 +26,4 @@ Route::get("kontakt", function() {
 
 Route::post("kontakt", ["uses" => "BaseController@Contact"]);
 
-Route::get("digital/{action}/{method}/{value}", ["uses" => "DigitalOceanController@index"]);
+Route::get("digital/{action}/{method}/{value?}", ["uses" => "DigitalOceanController@index"]);
