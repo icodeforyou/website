@@ -2,12 +2,15 @@
 
 class SpaController extends \BaseController {
 
-    public function tjanster()
+    public function RenderPage($page)
     {
-        $tjanster = View::make("tjanster");
+        $view = View::make($page);
+        dd($view);
         return Response::json([
-            "markup" => $tjanster->render()
+            "markup" => $view->render()
         ]);
     }
+
+
 
 }
