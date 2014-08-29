@@ -123,9 +123,6 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
 		"Way\Generators\GeneratorsServiceProvider", 
-
-		"Indatus\Dispatcher\ServiceProvider",
-
 		"GrahamCampbell\DigitalOcean\DigitalOceanServiceProvider",
 
 	),
