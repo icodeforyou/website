@@ -12,8 +12,11 @@ class DigitalOceanController extends \BaseController {
 	 */
 	public function index($action, $method, $value = null)
 	{
-		dd(DigitalOcean::$action()->$method($value));
-	//	dd($this->digitalOcean);
+		try {
+			var_dump(DigitalOcean::$action()->$method($value));
+		} catch (Exception $e) {
+			echo $e->getMessage();
+		}
 	}
 
 	
