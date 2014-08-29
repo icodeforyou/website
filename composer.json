@@ -7,7 +7,8 @@
 		"laravel/framework": "4.2.*",
 		"way/generators": "2.*",
 		"guzzlehttp/guzzle": "~4.0",
-		"indatus/dispatcher": "dev-master"
+		"indatus/dispatcher": "dev-master",
+		"graham-campbell/digitalocean": "~0.1"
 	},
 	"autoload": {
 		"classmap": [
@@ -35,5 +36,5 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "dev"
 }
