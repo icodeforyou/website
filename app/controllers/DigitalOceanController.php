@@ -10,9 +10,9 @@ class DigitalOceanController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($action, $method, $value = null)
 	{
-		dd(DigitalOcean::droplet()->getById("2473945"));
+		dd(DigitalOcean::$action()->$method($value));
 	//	dd($this->digitalOcean);
 	}
 
