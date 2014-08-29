@@ -4,11 +4,19 @@ class SpaController extends \BaseController {
 
     public function RenderPage($page)
     {
-        $view = View::make($page);
-        dd($view);
-        return Response::json([
-            "markup" => $view->render()
-        ]);
+        try {
+
+            $view = View::make($page);
+
+            return Response::json([
+                "markup" => $view->render()
+            ]);
+            
+        } catch (Exception $e) {
+            Response::json($e->getMessage(), 404);
+        }
+        
+        
     }
 
 
