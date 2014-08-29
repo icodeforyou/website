@@ -27,3 +27,7 @@ Route::get("kontakt", function() {
 Route::post("kontakt", ["uses" => "BaseController@Contact"]);
 
 Route::get("digital/{action}/{method}/{value?}", ["uses" => "DigitalOceanController@index"]);
+
+Route::group(["prefix" => "__spa/v1"], function() {
+    Route::get("tjanster", "SpaController@tjanster");
+});
