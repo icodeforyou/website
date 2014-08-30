@@ -55,18 +55,45 @@ html {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
+  height: 90px
 }
+
+.nav-btn {
+  position:absolute;
+  right: 20px;
+  top: 20px;
+}
+.sidebar-about,
+.copy {
+  display:none;
+}
+.sidebar-sticky img {
+  width: 10rem;
+}
+
 @media (min-width: 48rem) {
   .sidebar {
     position: fixed;
+    padding: 2rem 1rem;
     top: 0;
     left: 0;
     bottom: 0;
     width: 18rem;
     text-align: left;
+    height:auto;
+  }
+  .nav-btn {
+    display:none;
+  }
+  .sidebar-about,
+  .copy {
+    display:block;
+  }
+  .sidebar-sticky img {
+    width: 15rem;
   }
 }
 
@@ -99,9 +126,7 @@ a.sidebar-nav-item:focus {
   font-weight: bold;
 }
 
-.sidebar-about img {
-  width: 280px;
-}
+
 
 /* Sticky sidebar
  *
@@ -115,6 +140,7 @@ a.sidebar-nav-item:focus {
     right:  1rem;
     bottom: 1rem;
     left:   1rem;
+    width:320px;
   }
 }
 
@@ -126,12 +152,13 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
+  padding-top:    1rem;
   padding-bottom: 4rem;
 }
 
 @media (min-width: 48rem) {
   .content {
+    padding-top:    4rem;
     max-width: 38rem;
     margin-left: 20rem;
     margin-right: 2rem;

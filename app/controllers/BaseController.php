@@ -36,7 +36,7 @@ class BaseController extends Controller {
 		    $message->to("info@icode4u.se", "no-reply@icode4u.se")->subject("Kontakt från hemsidan!");
 		});
 
-		return Redirect::to("kontakt")->with("message", "Tack! Ditt meddelande har blivit skickat");
+		return Redirect::to("/kontakt")->with("message", "Tack! Ditt meddelande har blivit skickat");
 	}
 
 }

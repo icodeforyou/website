@@ -17,4 +17,7 @@ var SpaApp = angular.module('SpaApp', ['ui.router'])
                 url: '/kontakt',
                 templateUrl: '/__spa/v1/kontakt'
             })
+    })
+    .controller('mainController', function($scope) {
+        $scope.mobileNav = false;
     });
