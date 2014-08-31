@@ -27,9 +27,7 @@
 
     <h3 id="cloud-service">Cloud Service</h3>
     <p>
-        Vill man köra i molnet istället kan iCode4u hjälpa till mig att flytta över er hemsida till
-        <a href="http://aws.amazon.com/">Amazon Cloud Services</a>
-        . Att använda molnet för att drifta sin hemsida har visat sig vara väldigt kostnadseffektivt då man enbart betalar för prestandan/bandbredden man utnyttjar. Amazon har också samma möjligheter som Glesys att automatiskt skala upp prestandan på en hemsida allt eftersom man får mer trafik till sin hemsida.
+        Vill man köra i molnet istället kan iCode4u hjälpa till mig att flytta över er hemsida till <a href="http://aws.amazon.com/">Amazon Cloud Services</a> eller <a href="https://www.digitalocean.com/">Digital Ocean</a>. Att använda molnet för att drifta sin hemsida har visat sig vara väldigt kostnadseffektivt då man enbart betalar för prestandan/bandbredden man utnyttjar. Amazon och Digital Ocean har samma möjligheter som Glesys att automatiskt skala upp prestandan på en hemsida allt eftersom man får mer trafik till sin hemsida.
     </p>
 
 </div>

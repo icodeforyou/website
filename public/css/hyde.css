@@ -64,7 +64,9 @@ html {
 .nav-btn {
   position:absolute;
   right: 20px;
-  top: 20px;
+  top: 15px;
+  background-color: #ac4142;
+  font-size: 30px
 }
 .sidebar-about,
 .copy {

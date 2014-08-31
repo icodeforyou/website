@@ -7,7 +7,7 @@
         <div class="sidebar" ng-style="{height: !mobileNav ? '' : '190px'}">
             <div class="container sidebar-sticky">
                 <a href="/"><img src="/images/iCode4u_logo_320x114.png" alt="iCode4u"></a>
-                <button class="nav-btn btn btn-lg btn-default" ng-click="mobileNav = !mobileNav">
+                <button class="nav-btn btn btn-lg btn-toogle-menu" ng-click="mobileNav = !mobileNav">
                     <span class="glyphicon glyphicon-align-justify"></span>
                 </button>
                 <div class="sidebar-about">
