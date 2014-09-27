@@ -31,3 +31,6 @@ Route::get("digital/{action}/{method}/{value?}", ["uses" => "DigitalOceanControl
 Route::group(["prefix" => "__spa/v1"], function() {
     Route::get("{page}", "SpaController@RenderPage");
 });
+
+Route::get("instagram/{userId?}", "InstagramController@index");
+Route::get("instagramcode", "InstagramController@store");
