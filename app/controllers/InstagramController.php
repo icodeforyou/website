@@ -82,7 +82,7 @@ class InstagramController extends \BaseController
     {
 
         if(!Cache::has("instagram-accesstoken")) {
-            return Redirect::to("https://api.instagram.com/oauth/authorize/?client_id=1523d2b4ff6046eda3a1e26b23b5b77e&redirect_uri=http://icode4u.app:8000/instagramcode&response_type=code");
+            return Redirect::to("https://api.instagram.com/oauth/authorize/?client_id=1523d2b4ff6046eda3a1e26b23b5b77e&redirect_uri=http://icode4u.se/instagramcode&response_type=code");
         }
 
         if(strlen($userName)>0) {
