@@ -7,6 +7,14 @@
                {{ $item->caption->text }}
             </p>
             @endif
+            @if(isset($item->likes))
+                <p>
+                    <strong>Likes:</strong><br />
+                    @foreach($item->likes->data as $like)
+                        <a href="/instagram/{{ $like->username }}">{{ $like->username }}</a>
+                    @endforeach
+                </p>
+               @endif
             {{ var_dump($item) }}
         </div>
     @endforeach
