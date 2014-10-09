@@ -13,6 +13,9 @@
 
 App::before(function($request)
 {
+	// Sätt locale settings baserat på det som är
+	// sparat i sessionen
+	// Fallback till svenska
 	$locale = Session::get("locale", "sv");
 	App::setLocale($locale);
 

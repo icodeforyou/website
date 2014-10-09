@@ -12,7 +12,7 @@
                 </button>
                 <div class="sidebar-about">
                     <p class="lead">
-                        iCode4u.se är ett enmansföretag som utvecklar allt inom webb. iCode4u innehar F-skattesedel.
+                        {{ Lang::get("texts.lead") }}
                     </p>
                 </div>
               

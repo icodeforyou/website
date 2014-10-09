@@ -1,9 +1,9 @@
 @extends("layouts.master")
 
 @section("content")
-    <h1>Ta kontakt!</h1>
+    <h1>{{ Lang::get("headers.make_contact") }}</h1>
     <p>
-        Vill du komma i kontakt med iCode4u, skicka ett meddelande till iCode4u med formuläret nedan.
+        {{ Lang::get("texts.make_contact") }}
     </p>
     
     {{Form::open(["action" => "BaseController@Contact", "role" => "form"])}}
