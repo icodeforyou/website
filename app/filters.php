@@ -13,7 +13,9 @@
 
 App::before(function($request)
 {
-	//
+	$locale = Session::get("locale", "sv");
+	App::setLocale($locale);
+
 });
 
 

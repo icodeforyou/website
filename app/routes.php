@@ -34,3 +34,12 @@ Route::group(["prefix" => "__spa/v1"], function() {
 
 Route::get("instagram/{userId?}", "InstagramController@index");
 Route::get("instagramcode", "InstagramController@store");
+
+Route::get("locale/{locale}", function($locale) {
+
+    // Store the locale in session
+    Session::put("locale", $locale);
+    App::setLocale($locale);
+    return Redirect::back();
+
+});

@@ -17,7 +17,8 @@
                 </div>
               
                 @include("partials.partial-navigation")
-                
+
+                {{ App::getLocale() == "sv" ? "<a href=\"/locale/en\">In english</a>" : "<a href=\"/locale/sv\">På svenska</a>" }}
                 <p class="copy">&copy; {{ date("Y",time()) }}. All rights reserved. <em><small>Hosted @ <a href="https://www.digitalocean.com/?refcode=de6f50cc615f">DigitalOcean</a></small></em></p>
 
             </div>
