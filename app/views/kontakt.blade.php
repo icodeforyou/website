@@ -13,7 +13,7 @@
             @if($errors->first("email"))
                 <small class="error">{{ $errors->first("email") }}</small>
             @endif
-            {{ Form::text("email", Request::old("email"), ["class" => "form-control input-lg", "placeholder" => "Ange din email här…"]) }}
+            {{ Form::text("email", Request::old("email"), ["class" => "form-control input-lg", "placeholder" => Lang::get("texts.placeholders.your_email_here")]) }}
             
         </div>
         <div class="form-group">
@@ -22,7 +22,7 @@
             @if($errors->first("meddelande"))
                 <small class="error">{{ $errors->first("meddelande") }}</small>
             @endif
-            {{ Form::textarea("meddelande", Request::old("meddelande"), ["class" => "form-control input-lg", "rows" => 3, "placeholder" => "Skriv ditt meddelande här…"]) }}
+            {{ Form::textarea("meddelande", Request::old("meddelande"), ["class" => "form-control input-lg", "rows" => 3, "placeholder" => Lang::get("texts.placeholders.your_message_here")]) }}
         
         </div>
         <div class="form-group">

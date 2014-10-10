@@ -11,7 +11,7 @@
 |
 */
 
-App::before(function($request)
+App::before(function()
 {
 	// Sätt locale settings baserat på det som är
 	// sparat i sessionen

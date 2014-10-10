@@ -1,12 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: johan
- * Date: 2014-10-09
- * Time: 08:13
- */
+    /**
+     * Created by PhpStorm.
+     * User: johan
+     * Date: 2014-10-09
+     * Time: 08:13
+     */
 
 return [
+    "placeholders" => [
+        "your_message_here" => "Skriv ditt meddelande här…",
+        "your_email_here" => "Ange din email här…"
+    ],
     "about_icode4u" => "<p>
         Behöver du hjälp med att göra en smart och funktionell hemsida? Har du en bra idé på hur din framtida hemsida ska se ut?
     </p>
