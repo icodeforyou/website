@@ -17,6 +17,11 @@ var SpaApp = angular.module('SpaApp', ['ui.router'])
                 url: '/kontakt',
                 templateUrl: '/__spa/v1/kontakt'
             })
+
+            .state('instagram', {
+                url: '/instagram',
+                templateUrl: '/__spa/v1/instagram'
+            })
     })
     .controller('mainController', function($scope) {
         $scope.mobileNav = false;

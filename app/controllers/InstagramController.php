@@ -17,11 +17,17 @@ class InstagramController extends \BaseController
      * @var string
      */
     private $endPointUserId = "https://api.instagram.com/v1/users/%USERID%/media/recent?access_token=";
+    /**
+     * @var string
+     */
     private $endPointUsername = "https://api.instagram.com/v1/users/search?q=%USERNAME%&access_token=";
     /**
      * @var string
      */
     private $userId = "8363601";
+    /**
+     * @var string
+     */
     private $userName = "johanthorstedt";
 
     /**
@@ -39,7 +45,6 @@ class InstagramController extends \BaseController
     {
         $this->userName = $userName;
     }
-
 
     /**
      * @return string
@@ -65,6 +70,9 @@ class InstagramController extends \BaseController
         return str_replace("%USERNAME%", $this->getUserName(), $this->endPointUsername) . $this->token;
     }
 
+    /**
+     * @return string
+     */
     public function getEndpointUserId()
     {
         return str_replace("%USERID%", $this->getUserId(), $this->endPointUserId) . $this->token;
@@ -80,13 +88,15 @@ class InstagramController extends \BaseController
      */
     public function index($userName = "")
     {
-
-        if(!Cache::has("instagram-accesstoken")) {
+        // If there is no access token set in cache, lets request a new token from instagram
+        if (!Cache::has("instagram-accesstoken")) {
             return Redirect::to("https://api.instagram.com/oauth/authorize/?client_id=1523d2b4ff6046eda3a1e26b23b5b77e&redirect_uri=http://icode4u.se/instagramcode&response_type=code");
         }
 
-        if(strlen($userName)>0) {
-             $this->setUserName($userName);
+        // If there is a user name provided we shall use that instead of the
+        // fallback username
+        if (strlen($userName) > 0) {
+            $this->setUserName($userName);
         }
 
         if (!Cache::has("instagram-feed-" . $this->getUserName())) {

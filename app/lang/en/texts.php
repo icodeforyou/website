@@ -33,6 +33,6 @@ return [
     "make_contact" => "Do you want to get in touch with iCode4u, send a message to iCode4u with the form below.",
     "webb_development" => "iCode4u develop primarily in PHP, Laravel with connections to MySQL databases. We increase the ease of use with the help of javascript languages like jQuery and AngularJS and its amazing possibilities.",
     "optimizations" => "Need help with :link and improvements to your existing web solution, iCode4u will be happy to help. We can help get you noticed on the web.",
-    "cloud_hosting" => "If you want to run your webb solution in the cloud, no problem! iCode4u can help you deploying your webb solution to both a traditional webb hosting service and to for example :amazon or :digitalocean. Using the cloud to run your webb solution has proven to be very cost effective since you only pay for performance / bandwidth utilizing your solution is using. Amazon and Digital Ocean have the functionality to automatically scale up the performance of you webb solution if needed"
-
+    "cloud_hosting" => "If you want to run your webb solution in the cloud, no problem! iCode4u can help you deploying your webb solution to both a traditional webb hosting service and to for example :amazon or :digitalocean. Using the cloud to run your webb solution has proven to be very cost effective since you only pay for performance / bandwidth utilizing your solution is using. Amazon and Digital Ocean have the functionality to automatically scale up the performance of you webb solution if needed",
+    "thanks_for_email" => "Thanks! Your message have been sent"
 ];
