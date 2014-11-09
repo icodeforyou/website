@@ -43,3 +43,5 @@ Route::get("locale/{locale}", function($locale) {
     return Redirect::back();
 
 });
+
+Route::post("fibertillsloinge", "BaseController@fiberProxy");

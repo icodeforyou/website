@@ -39,4 +39,27 @@ class BaseController extends Controller
         return Redirect::to("/kontakt")->with("message", Lang::get("texts.thanks_for_email"));
     }
 
+    public function fiberProxy()
+    {
+        $validatorRules = [
+            "email"      => "required|email",
+            "adress"     => "required"
+        ];
+
+        // Validera formuläret
+        $validator = Validator::make(Input::all(), $validatorRules);
+
+        if ($validator->fails()) {
+            return Redirect::back();
+        }
+
+        Mail::send("emails.fiber-email", ["email" => Input::get("email"), "name" => Input::get("name"), "adress" => Input::get("adress")],
+            function ($message) {
+                $message->from(Input::get("email"));
+                $message->to("intresserad@fibertillsloinge.se", "no-reply@icode4u.se")->subject("En som är intresserad av fiber");
+            });
+
+        return Redirect::away("http://fibertillslöinge.se/tack");
+    }
+
 }
