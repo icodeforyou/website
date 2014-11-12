@@ -56,7 +56,7 @@ class BaseController extends Controller
         Mail::send("emails.fiber-email", ["email" => Input::get("email"), "name" => Input::get("name"), "adress" => Input::get("adress")],
             function ($message) {
                 $message->from(Input::get("email"));
-                $message->to("intresserad@fibertillsloinge.se", "no-reply@icode4u.se")->subject("En som är intresserad av fiber");
+                $message->to("info@fibertillsloinge.se", "no-reply@icode4u.se")->subject("En som är intresserad av fiber");
             });
 
         return Redirect::away("http://fibertillslöinge.se/tack");
