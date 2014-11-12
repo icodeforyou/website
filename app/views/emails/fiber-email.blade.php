@@ -8,9 +8,7 @@
 
         <div>
             <b>Från:</b> {{ $name }} ({{ $email }})<br />
-            <p>
-                {{ $adress }}
-            </p>
+            <b>Adress:</b>{{ $adress }}
         </div>
     </body>
 </html>
