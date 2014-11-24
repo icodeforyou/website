@@ -89,6 +89,12 @@ Route::get("fibertillsloinge/intressenter", function () {
             "name"    => "Fredrik Norén",
             "email"   => "vallagurun@telia.com",
             "address" => "Rosgatan 4, 311 67 Slöinge"
+        ],
+        [
+            "name"    => "Thorvald Persson",
+            "name2"   => "Ingrid Persson",
+            "email"   => "thorvald.persson@telia.com",
+            "address" => "Yttregårdsvägen 8, 311 06 Heberg"
         ]
     ];
 
