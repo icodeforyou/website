@@ -58,7 +58,7 @@ class BaseController extends Controller
             "name" => Input::get("your_name"), 
             "adress" => Input::get("formatted_address"),
             "lat" => Input::get("lat"),
-            "lon" => Input::get("lon"),
+            "lon" => Input::get("lng"),
             "postalCode" => Input::get("postal_code")
         ];
 
