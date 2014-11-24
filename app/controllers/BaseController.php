@@ -42,8 +42,8 @@ class BaseController extends Controller
     public function fiberProxy()
     {
         $validatorRules = [
-            "email"      => "required|email",
-            "adress"     => "required"
+            "email"             => "required|email",
+            "formatted_address" => "required"
         ];
 
         // Validera formuläret
@@ -53,7 +53,26 @@ class BaseController extends Controller
             return Redirect::back();
         }
 
-        Mail::send("emails.fiber-email", ["email" => Input::get("email"), "name" => Input::get("name"), "adress" => Input::get("adress")],
+        $parts = [
+            "email" => Input::get("email"), 
+            "name" => Input::get("your_name"), 
+            "adress" => Input::get("formatted_address"),
+            "lat" => Input::get("lat"),
+            "lon" => Input::get("lon"),
+            "postalCode" => Input::get("postal_code")
+        ];
+
+        Entry::create([
+            "name" => $parts["name"],
+            "name2" => "",
+            "postalCode" => preg_replace('/\s/', "", $parts["postalCode"]),
+            "email" => $parts["email"],
+            "address" => $parts["adress"],
+            "lat" => $parts["lat"],
+            "lon" => $parts["lon"]
+        ]);
+
+        Mail::send("emails.fiber-email", $parts,
             function ($message) {
                 $message->from(Input::get("email"));
                 $message->to("info@fibertillsloinge.se", "no-reply@icode4u.se")->subject("En som är intresserad av fiber");

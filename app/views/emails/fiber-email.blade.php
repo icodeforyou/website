@@ -8,7 +8,10 @@
 
         <div>
             <b>Från:</b> {{ $name }} ({{ $email }})<br />
-            <b>Adress:</b>{{ $adress }}
+            <b>Adress:</b> {{ $adress }}<br />
+            <b>Latitude:</b> {{ $lat }} <br />
+            <b>Longitude:</b> {{ $lon }}<br />
+            <b>Postnummer:</b> {{ $postalCode }}
         </div>
     </body>
 </html>
