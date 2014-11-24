@@ -95,9 +95,20 @@ Route::get("fibertillsloinge/intressenter", function () {
             "name2"   => "Ingrid Persson",
             "email"   => "thorvald.persson@telia.com",
             "address" => "Yttregårdsvägen 8, 311 06 Heberg"
+        ],
+        [
+            "name"    => "Patric Brundin",
+            "name2"   => "Anneli Brundin",
+            "email"   => "40208@telia.com",
+            "address" => "Bäckagårdsvägen 6, 311 68 Slöinge"
+        ],
+        [
+            "name"    => "Stig Svensson",
+            "email"   => "5716svensson@telia.com",
+            "address" => "Stenlösvägen 6, 311 68 Slöinge"
         ]
     ];
 
 
-    return Response::json($intressenter, 200, ['Access-Control-Allow-Origin' => '*']);
+    return Response::json(Entry::all(), 200, ['Access-Control-Allow-Origin' => '*']);
 });
