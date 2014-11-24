@@ -104,15 +104,12 @@ class EntriesTableSeeder extends Seeder {
         
             $zip = substr(trim($addressParts[1]), 0, 6);
             
-            $city = trim(substr(trim($addressParts[1]), 6));
-
 			Entry::create([
                 "name" => $index["name"],
                 "name2" => isset($index["name2"]) ? $index["name2"] : "",
                 "postalCode" => preg_replace('/\s/', "", $zip),
-                "city" => $city,
                 "email" => $index["email"],
-                "address" => trim($addressParts[0]),
+                "address" => $index["address"],
                 "lat" => $index["lat"],
                 "lon" => $index["lon"]
 			]);
