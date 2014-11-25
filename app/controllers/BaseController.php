@@ -42,7 +42,7 @@ class BaseController extends Controller
     public function fiberProxy()
     {
         $validatorRules = [
-            "email"             => "required|email",
+            "email"             => "required|email|unique:entries",
             "formatted_address" => "required"
         ];
 
@@ -50,7 +50,15 @@ class BaseController extends Controller
         $validator = Validator::make(Input::all(), $validatorRules);
 
         if ($validator->fails()) {
-            return Redirect::back();
+
+            $failed = $validator->failed();
+            if(isset($failed["formatted_address"])) {
+                return Redirect::away("http://fibertillsloinge.se/knasig-adress");
+            } else if (isset($failed["email"])) {
+                return Redirect::away("http://fibertillsloinge.se/knasig-email");
+            } else {
+                return Redirect::back();
+            }
         }
 
         $parts = [
@@ -78,7 +86,7 @@ class BaseController extends Controller
                 $message->to("info@fibertillsloinge.se", "no-reply@icode4u.se")->subject("En som är intresserad av fiber");
             });
 
-        return Redirect::away("http://fibertillslöinge.se/tack");
+        return Redirect::away("http://fibertillsloinge.se/tack");
     }
 
 }
