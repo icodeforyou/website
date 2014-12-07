@@ -45,5 +45,5 @@ Route::get("locale/{locale}", function ($locale) {
 
 Route::post("fibertillsloinge", "BaseController@fiberProxy");
 Route::get("fibertillsloinge/intressenter", function () {
-    return Response::json(Entry::all(), 200, ['Access-Control-Allow-Origin' => '*']);
+    return Response::json(Entry::Visible()->get(), 200, ['Access-Control-Allow-Origin' => '*']);
 });
