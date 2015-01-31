@@ -47,3 +47,34 @@ Route::post("fibertillsloinge", "BaseController@fiberProxy");
 Route::get("fibertillsloinge/intressenter", function () {
     return Response::json(Entry::Visible()->get(), 200, ['Access-Control-Allow-Origin' => '*']);
 });
+
+Route::get("fibertillsloinge/allaintresserade", function() {
+
+    $entries = Entry::Visible()->get();
+
+    Excel::create("fiber-oktorp-alla.xls", function($excel) use($entries) {
+
+        $excel->sheet("Intresserade", function($sheet) use($entries) {
+
+            $sheet->fromModel($entries);
+
+        });
+
+    })->export("xls");
+
+
+/*
+    $output = "";
+    foreach ($entries as $row) {
+        $output .= implode(";",$row->toArray());
+    }
+
+    $headers = array(
+        'Content-Type' => 'text/csv',
+        'Content-Disposition' => 'attachment; filename="ExportFileName.csv"',
+    );
+
+    return Response::make($output, 200, $headers);
+
+*/
+});
