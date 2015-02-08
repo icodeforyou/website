@@ -48,11 +48,11 @@ Route::get("fibertillsloinge/intressenter", function () {
     return Response::json(Entry::Visible()->get(), 200, ['Access-Control-Allow-Origin' => '*']);
 });
 
-Route::get("fibertillsloinge/allaintresserade", function() {
+Route::get("fibertillsloinge/allaintresserade/{format?}", function($format) {
 
     $entries = Entry::Visible()->get();
 
-    Excel::create("fiber-oktorp-alla.xls", function($excel) use($entries) {
+    Excel::create("fiber-oktorp-alla", function($excel) use($entries) {
 
         $excel->sheet("Intresserade", function($sheet) use($entries) {
 
@@ -60,7 +60,7 @@ Route::get("fibertillsloinge/allaintresserade", function() {
 
         });
 
-    })->export("xls");
+    })->export($format);
 
 
 /*
