@@ -36,7 +36,7 @@ class BaseController extends Controller
                 $message->to("info@icode4u.se", "no-reply@icode4u.se")->subject("Kontakt från hemsidan!");
             });
 
-        return Redirect::to("/kontakt")->with("message", Lang::get("texts.thanks_for_email"));
+        return Redirect::to("kontakt")->with("message", Lang::get("texts.thanks_for_email"));
     }
 
     public function fiberProxy()
