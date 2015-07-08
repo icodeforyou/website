@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "name": "laravel/lumen",
     "description": "The Laravel Lumen Framework.",
     "keywords": ["framework", "laravel", "lumen"],
@@ -29,44 +28,4 @@
     "config": {
         "preferred-install": "dist"
     }
-=======
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
-	"license": "MIT",
-	"require": {
-		"laravel/framework": "4.2.*",
-		"way/generators": "2.*",
-		"graham-campbell/digitalocean": "~0.1",
-		"guzzlehttp/guzzle": "~4.0",
-		"maatwebsite/excel": "~1.3.0"
-	},
-	"autoload": {
-		"classmap": [
-			"app/commands",
-			"app/controllers",
-			"app/models",
-			"app/database/migrations",
-			"app/database/seeds",
-			"app/tests/TestCase.php"
-		]
-	},
-	"scripts": {
-		"post-install-cmd": [
-			"php artisan clear-compiled",
-			"php artisan optimize"
-		],
-		"post-update-cmd": [
-			"php artisan clear-compiled",
-			"php artisan optimize"
-		],
-		"post-create-project-cmd": [
-			"php artisan key:generate"
-		]
-	},
-	"config": {
-		"preferred-install": "dist"
-	},
-	"minimum-stability": "dev"
->>>>>>> ede858c770fa95519ed6555d84c00ba631528098
 }
